@@ -29,6 +29,8 @@
 		resetBtn.addEventListener('click',()=>{
 			count = 0;
 			displayCounter.textContent = count;
+			maximumDisplay.textContent = 'None'
+			maximumInput.value = ''
 		})
 
 		decBtn.addEventListener('click',()=>{
@@ -38,11 +40,28 @@
 			}
 		})
 
-		incBtn.addEventListener('click',()=>{
-				count ++
-				displayCounter.textContent = count
-		})
+		incBtn.addEventListener('click', ()=>{
+			const maxNumberVal = maximumInput.value.trim()
 
+			if(maxNumberVal !== ''){
+				let val = Number(maxNumberVal)
+
+				if(count < val){
+					count ++
+				}
+			}else{
+				count ++
+			}
+			displayCounter.textContent = count
+		})
+		setMaximumBtn.addEventListener('click', ()=>{
+			let val = maximumInput.value.trim();
+			if(val !== ''){
+				maximumDisplay.textContent = val
+			}else{
+				maximumDisplay.textContent = 'None'
+			}
+		})
 
 	</script>
 </body>
