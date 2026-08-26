@@ -1,18 +1,3 @@
-function resreve(name){
-
-    let reversed = ""
-    for(let i = name.length-1 ; i >= 0 ; i--){
-        reversed += name[i]
-    }
-    return reversed
-}
-
-console.log(resreve("YAR"))
-
-let str = "yar"
-
-console.log(str.split(''))
-console.log([...str])
 
 let courseName = "HTML-CSS-JavaScript";
 console.log(courseName.split('-'))
@@ -61,3 +46,16 @@ console.log(reverseing("OMAR"))
 //Spread Operator ...
 let srtingRev = str => [...str].reverse().join('')
 console.log(srtingRev("Hello"))
+
+//return
+let s = (str)=> { return str.split('').reverse().join('')}
+console.log(s('hana'))
+
+//Implicit Return
+let s = (str)=> str.split('').reverse().join('')
+console.log(s('yara'))
+
+let str = "yar"
+console.log(str.split(''))
+console.log([...str])
+// console.log(...str) error

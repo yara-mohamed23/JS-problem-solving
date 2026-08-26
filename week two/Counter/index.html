@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+</head>
+<body>
+
+    <p> Maximum : <span id="maximum-display">None</span></p>
+	<h1 id="counter">0</h1>
+	
+	<button id="inc-btn">+</button>
+	<button id="dec-btn">-</button>
+	<button id="reset-btn">Reset</button>
+	<br><br>
+	<input id="maximum-input" type="number" placeholder="Set Maximum Value">
+	<button id="setMaximum-btn">Set Maximum</button>
+
+	<script>
+		const maximumDisplay = document.getElementById('maximum-display')
+		const displayCounter = document.getElementById('counter')
+		const incBtn = document.getElementById('inc-btn')
+		const decBtn = document.getElementById('dec-btn')
+		const resetBtn = document.getElementById('reset-btn')
+		const maximumInput = document.getElementById('maximum-input')
+		const setMaximumBtn = document.getElementById('setMaximum-btn')
+		let count = 0;
+
+		resetBtn.addEventListener('click',()=>{
+			count = 0;
+			displayCounter.textContent = count;
+		})
+
+		decBtn.addEventListener('click',()=>{
+			if(count > 0){
+				count --
+				displayCounter.textContent = count
+			}
+		})
+
+		incBtn.addEventListener('click',()=>{
+				count ++
+				displayCounter.textContent = count
+		})
+
+
+	</script>
+</body>
+</html>

@@ -13,3 +13,11 @@ function largestNumberArray(arr){
 console.log(largestNumberArray([1,2,3,5]))
 console.log(largestNumberArray([3]))
 console.log(largestNumberArray([]))
+
+//Max
+let s = (arr)=> Math.max(...arr)
+console.log(s([1,2,3]))
+
+//witout Spread Operator Max
+//let s = (arr)=> Math.max(arr)
+//console.log(s([1,2,3])) // NAN

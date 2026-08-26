@@ -15,3 +15,7 @@ function countVowels(str){
 console.log(countVowels("yara"))
 console.log(countVowels("ilyas"))
 console.log(countVowels("abdallah"))
+
+//match
+let vowels = (str)=> (str.match(/[aeiou]/gi) || []).length
+console.log(vowels("yayayaya"))
