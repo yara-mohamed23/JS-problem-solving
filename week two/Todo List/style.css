@@ -1,0 +1,79 @@
+body{
+	background-color: #0D0714;
+	color: #9E78CF;
+	height: 100vh; /* جعل ارتفاع الصفحة يملأ الشاشة بالكامل */
+    display: flex; /* تحويل الـ body إلى حاوية مرنة */
+    justify-content: center; /* التوسيط أفقياً (في المنتصف يميناً ويساراً) */
+    align-items: center; /* التوسيط عمودياً (في المنتصف أعلى وأسفل) */
+    margin: 0;
+	font-family: sans-serif;
+
+}
+.container{
+	
+}
+#AddTaskSection{
+	width: 432px;
+	height: 40px;
+	display: flex;           /* عشان الـ input والزرار يبقوا جنب بعض */
+    align-items: center;
+    gap: 8px;
+}
+#AddTaskInput{
+	background-color: #0D0714;
+	border: 1px solid #3E1671;
+	border-radius: 10px;
+	width: 381px;
+	height: 40px;
+	box-sizing: border-box;
+		color: #9E78CF;
+
+}
+#AddTaskBtn {
+	background-color: #9E78CF;
+	border: 1px solid #3E1671;
+	border-radius: 10px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	display: flex;           /* عشان الأيقونة تتوسط جوه الزرار */
+    align-items: center;
+    justify-content: center;
+}
+.taskNumClass{
+	color: aliceblue;
+}
+.taskDec{
+	width: 432px;
+	height: 75px;
+	border-radius: 10px;
+	background-color: #15101C;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  box-sizing: border-box;
+  margin-top: 10px
+}
+.taskActions{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+::placeholder {
+  font-size: 1em;
+  color: #777777;
+  padding: 5px;
+  content : "some other placeholder" !important;
+}
+.doneBtn,
+.deleteBtn {
+	width: 30px;
+	height: 30px;
+	background-color: #15101C;
+	border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

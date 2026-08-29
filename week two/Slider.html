@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+</head>
+<body>
+  
+  <img id="sliderImage" src="https://picsum.photos/id/1018/800/400" alt="Slider Image">
+  <br><br>
+  <button id="previousBtn">Previous</button>
+  <button id="nextBtn">Next</button>
+  <button id="resetBtn">Reset</button>
+  <button id="playBtn">Play</button>
+  <button id="stopBtn">Stop</button>
+  <br><br>
+  <input id="enterImageURLInput" placeholder="Enter Image URL">
+  <button id="addImageBtn">Add Image</button>
+
+	<script>
+    let images = [
+  "https://picsum.photos/id/1018/800/400",
+  "https://picsum.photos/id/1015/800/400",
+  "https://picsum.photos/id/1019/800/400"]
+
+    let currentIndex = 0; 
+    let timer = null;
+
+    // DOM Elements
+    let previousBtn = document.getElementById('previousBtn')
+    let nextBtn = document.getElementById('nextBtn')
+    let resetBtn = document.getElementById('resetBtn')
+    let playBtn = document.getElementById('playBtn')
+    let stopBtn = document.getElementById('stopBtn')
+    let enterImageURLInput = document.getElementById('enterImageURLInput')
+    let addImageBtn = document.getElementById('addImageBtn')
+
+    function showImage() {
+      sliderImage.src = images[currentIndex];
+    }
+
+    // Previous
+    previousBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        showImage();
+      }
+    });
+
+    // Next
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        showImage();
+      }
+    });
+
+    // Reset
+    resetBtn.addEventListener('click', () => {
+      currentIndex = 0;
+      showImage();
+      clearInterval(timer);
+    });
+  </script>
+</body>
+</html>
